@@ -16,13 +16,13 @@
               <h1>HTML Elements</h1>
               <hr />
               <nav>
-                <a href="#"><b>Home</b></a>
-                <a href="#"><b>Headings</b></a>
-                <a href="#"><b>Text formats </b></a>
-                <a href="#"><b>Types of lists </b></a>
-                <a href="#"><b>Table</b></a>
-                <a href="#"><b>Blockquotes</b></a>
-                <a href="#"><b>Registration</b></a>
+                <a href="#top"><b>Home</b></a>
+                <a href="#headings"><b>Headings</b></a>
+                <a href="#text-formats"><b>Text formats </b></a>
+                <a href="#lists"><b>Types of lists </b></a>
+                <a href="#table"><b>Table</b></a>
+                <a href="#blockquotes"><b>Blockquotes</b></a>
+                <a href="#registation"><b>Registration</b></a>
               </nav>
               <hr />
             </header>
@@ -55,6 +55,7 @@
               </p>
               <hr />
               <p>
+                <a id="headings"></a>
                 h1 defines the most important heading. h6 defines the least
                 important heading. Font-size for h1 is the same as font-size for
                 h2, because we have to use only one h1 on the page, and it is
@@ -67,7 +68,7 @@
               <h6>Heading 6</h6>
               <hr />
 
-              <h2>Text formats</h2>
+              <h2><a id="text-formats"></a>Text formats</h2>
 
               <h3>Article</h3>
               <article>
@@ -94,6 +95,7 @@ both       <b>spaces</b> and
               </pre>
               </article>
               <h2>
+                <a id="lists"></a>
                 Unordered Wish List
               </h2>
               <ul>
@@ -138,13 +140,14 @@ both       <b>spaces</b> and
                 </dd>
               </dl>
               Select for learning
-              <select name="select">
+              <select id="select">
                 <option>JS</option>
                 <option>HTML</option>
                 <option>CSS</option>
               </select>
               <hr />
               <hr />
+              <a id="table"></a>
               <h2>Table</h2>
               <table>
                 <thead>
@@ -178,11 +181,12 @@ both       <b>spaces</b> and
                 </tbody>
               </table>
               <h2>Blockquotes</h2>
+              <a id="blockquotes"></a>
               <p>
                 Let’s keep it simple. Italics are good to help set it off from
                 the body text. Be sure to style the citation.
               </p>
-              <blockquote cite="#">
+              <blockquote>
                 <span>
                   "So if you want to go fast, if you want to get done quickly,
                   if you want your code to be easy to write, make it easy to
@@ -192,6 +196,7 @@ both       <b>spaces</b> and
                 <span><a href="#">Robert C. Martin (Uncle Bob)</a></span>
               </blockquote>
               <hr />
+              <a id="registation"></a>
               <form>
                 <span>Username: <input type="text"/></span>
                 <br />
