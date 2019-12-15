@@ -1,0 +1,237 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $contentBackground;
+  font-family: map-get($fonts, "Source"), sans-serif;
+  color: $mainColor;
+}
+
+main {
+  margin: 0 auto;
+  width: 960px;
+}
+
+div.landing-logo {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+
+  img {
+    margin: 5px 10px 0 0;
+    height: 37px;
+    width: 37px;
+  }
+
+  p {
+    font-family: $fontFamily;
+    margin: 5px 0 0 0;
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  span {
+    display: block;
+    font-size: 8px;
+    text-align: center;
+  }
+}
+
+@mixin mark($markColor, $right, $top, $width, $height) {
+  &::after {
+    position: absolute;
+    z-index: -1;
+    right: $right;
+    top: $top;
+    content: " ";
+    background: $markColor;
+    width: $width;
+    height: $height;
+  }
+}
+
+@mixin button($buttonBg) {
+  background-color: $buttonBg;
+  display: inline-block;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 2px;
+  width: 113px;
+  height: 38px;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background: lighten($buttonBg, 8%);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: lighten($buttonBg, 15%);
+  }
+}
+
+@mixin link() {
+  color: #fff;
+  font-weight: 600;
+}
+
+.header {
+  background: $headerBg center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 160px 0 155px;
+  max-width: 1920px;
+  height: 575px;
+  border-bottom-right-radius: 600px 230px;
+
+  &_heading {
+    max-width: 500px;
+    font-weight: 900;
+    font-size: 57px;
+    line-height: 58px;
+    margin: 55px 0 30px 0;
+    position: relative;
+    z-index: 10;
+    @include mark($markColor, 260px, 75px, 240px, 40px);
+  }
+
+  &_text {
+    font-family: $fontFamily;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    white-space: pre-line;
+  }
+}
+
+.header_button {
+  @include button($buttonBg);
+}
+
+.header-wrap div:last-of-type {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    @include link;
+  }
+}
+
+.section {
+  .section_text {
+    color: $mainColor;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin: 30px auto;
+    @include mark($markColor, 320px, -3px, 155px, 40px);
+  }
+
+  .section_card {
+    display: flex;
+    background-color: $cardColor;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 5px;
+    height: 260px;
+    max-width: 880px;
+
+    .section_card_heading {
+      margin: 0;
+      margin-top: 60px;
+      color: #fff;
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .section_card_text,
+    .section_link {
+      font-family: $fontFamily;
+      text-align: justify;
+      padding: 20px 80px 0 62px;
+      font-size: 13px;
+      color: $secondaryColor;
+      line-height: 20px;
+    }
+
+    img.section_card_img {
+      border-radius: 5px;
+      margin: 15px;
+      height: auto;
+      width: 40%;
+      position: relative;
+    }
+
+    .section_card_right_container {
+      width: 60%;
+    }
+  }
+}
+
+.section_banner {
+  position: relative;
+  top: 80px;
+  background: $bannerBg;
+  border-radius: 5px;
+  height: 95px;
+  padding: 12px 140px;
+
+  .section_banner_heading {
+    color: $mainColor;
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    z-index: 10;
+    margin: 10px auto;
+    @include mark($markColor, 528px, -10px, 53px, 40px);
+  }
+
+  .section_banner_text {
+    font-family: $fontFamily;
+    color: $secondaryColor;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  &_button {
+    float: right;
+    @extend .header_button;
+    position: relative;
+    bottom: 58px;
+  }
+}
+
+.footer {
+  &-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 140px;
+    width: 100%;
+    background: $cardColor;
+    font-family: $fontFamily;
+    color: $secondaryColor;
+    padding: 65px 0 0 0;
+  }
+
+  &_text {
+    font-size: 12px;
+    font-weight: 300;
+    max-width: 245px;
+  }
+
+  &-cr {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
