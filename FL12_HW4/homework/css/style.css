@@ -15,11 +15,13 @@ nav {
   box-sizing: border-box;
   background: #fff;
   position: fixed;
+  z-index: 100;
   flex-direction: row;
   justify-content: space-between;
   padding: 25px 200px;
   align-items: center;
   color: #777;
+  margin-bottom: 80px;
 }
 
 nav .logo {
@@ -27,7 +29,6 @@ nav .logo {
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: 600;
-  text-shadow: 2px 2px 2px #777;
 }
 
 nav .navbar {
@@ -35,7 +36,6 @@ nav .navbar {
 }
 
 nav .navbar-items {
-  text-shadow: 2px 2px 2px #777;
   padding: 5px 20px;
 }
 
@@ -49,10 +49,12 @@ nav .navbar-items a.link:hover {
   color: #bfba55;
 }
 
-.banner {
+.hero {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../img/home-bg.jpg");
+  background-position: top center;
   background-size: cover;
-  background-attachment: fixed;
+  position: relative;
+  top: 80px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -62,19 +64,20 @@ nav .navbar-items a.link:hover {
   vertical-align: middle;
 }
 
-.banner-header {
+.hero-header {
   margin: 120px auto 20px auto;
   color: #fff;
   font-size: 66px;
 }
 
-.banner-text {
+.hero-text {
   color: #bfba55;
   font-weight: 500;
   letter-spacing: 3px;
+  margin: 0 auto 30px auto;
 }
 
-.banner-btn {
+.hero-btn {
   margin: 20px;
   background-color: #fff;
   display: inline-block;
@@ -90,15 +93,15 @@ nav .navbar-items a.link:hover {
   cursor: pointer;
 }
 
-.banner-btn:hover {
+.hero-btn:hover {
   background: #ebebeb;
 }
 
-.banner-btn:active {
+.hero-btn:active {
   background: #d9d9d9;
 }
 
-.banner-btn a {
+.hero-btn a {
   color: #777;
   text-decoration: none;
   transition: all 0.3s;
@@ -106,12 +109,12 @@ nav .navbar-items a.link:hover {
   font-size: 12px;
 }
 
-.banner-btn a:hover {
+.hero-btn a:hover {
   color: #bfba55;
 }
 
 main {
-  margin: 0 auto;
+  margin: 130px auto;
   max-width: 900px;
 }
 
@@ -219,7 +222,7 @@ main {
   .navbar-items {
     padding: 5px 15px;
   }
-  .banner-header {
+  .hero-header {
     font-size: 50px;
   }
   .footer-info {
