@@ -1,0 +1,408 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #024161;
+  --link: #fff;
+  --link--hover: #1f52a4;
+  --bg-footer-color: #024161;
+}
+
+body {
+  font-family: roboto;
+  margin: 0 auto;
+  background: #0b192f;
+}
+header {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+main {
+  max-width: 940px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+nav {
+  display: flex;
+  background: #024161;
+  flex-direction: row;
+  padding: 0 2em;
+  align-items: center;
+  min-height: 60px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0 auto;
+  align-items: center;
+
+  vertical-align: center;
+  align-self: center;
+  height: 100%;
+}
+.navbar-items {
+  display: flex;
+  transition: all 0.3s;
+  padding: auto;
+  height: 100%;
+  width: 70px;
+  line-height: 60px;
+}
+.navbar-items:hover {
+  background-color: #1f52a4;
+  cursor: pointer;
+}
+.navbar-items a {
+  color: #fff;
+  text-decoration: none;
+  margin: auto;
+  font-weight: 300;
+}
+.logo {
+  font-size: 26px;
+  font-weight: 300;
+}
+.logo span:first-child {
+  color: #fff;
+}
+.logo span:last-child {
+  color: #9d27b0;
+}
+
+.banner {
+  color: white;
+  background: url(../img/post0.jpg);
+  background-size: cover;
+  background-position: right bottom;
+  max-width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+.banner-header {
+  font-size: 38px;
+  font-weight: 200;
+  margin: 0;
+}
+.banner-text {
+  font-weight: 200;
+  font-size: 12px;
+  max-width: 540px;
+  line-height: 24px;
+}
+.banner-container {
+  padding: 30px;
+}
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.posts {
+  flex: 3;
+  padding: 0;
+}
+
+.posts li {
+  display: flex;
+  min-height: 230px;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+}
+.post-image-wrapper {
+  flex: 0 0 49.8%;
+  position: relative;
+}
+
+.post-1 .post-image-wrapper {
+  background: url("../img/post1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.post-1 .post-image-wrapper:hover:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(157, 39, 176, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.post-2 .post-image-wrapper {
+  background: url("../img/post2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.post-2 .post-image-wrapper:hover:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(155, 184, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.post-3 .post-image-wrapper {
+  background: url("../img/post3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.post-3 .post-image-wrapper:hover:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(237, 81, 32, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.post-4 .post-image-wrapper {
+  background: url("../img/post4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.post-4 .post-image-wrapper:hover:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(157, 39, 176, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.post-content {
+  color: #fff;
+  flex: 1 1 51%;
+  padding: 30px;
+  position: relative;
+}
+.post-content:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.post-header {
+  font-size: 34px;
+  font-weight: 200;
+  margin: 0 0 20px;
+  line-height: 32px;
+}
+.posts li:nth-child(odd) .post-header {
+  padding-right: 50px;
+}
+.posts li:nth-child(even) .post-header {
+  padding-left: 50px;
+}
+
+.post-text {
+  font-size: 11px;
+  font-weight: 200;
+  line-height: 20px;
+}
+ol.posts li:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.post-1 {
+  background: rgb(157, 39, 176);
+}
+
+.date {
+  color: #ccc;
+  font-weight: 200;
+  font-size: 18px;
+  position: absolute;
+  top: 15px;
+  min-width: 60px;
+}
+.date-left {
+  left: 0;
+}
+.date-right {
+  right: 0;
+}
+.date::first-line {
+  font-size: 34px;
+}
+.post-2 {
+  background: rgb(155, 184, 0);
+}
+
+.post-3 {
+  background: rgb(237, 81, 32);
+}
+
+.post-4 {
+  background: rgb(157, 39, 176);
+}
+
+ol.posts li.post-5 .post-content {
+  background: #2d95bb;
+  display: block;
+}
+
+.news-container {
+  margin: 20px 0 20px 20px;
+  flex: 1;
+  min-width: 200px;
+}
+.news {
+  background: #fff;
+  margin-bottom: 20px;
+}
+.news-image {
+  width: 100%;
+  height: 100%;
+}
+.news-header {
+  margin: 10px 30px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.news-text {
+  font-size: 11px;
+  font-weight: 300;
+  margin: 20px 30px;
+  line-height: 20px;
+}
+footer {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer-wrapper {
+  display: flex;
+  background: #024161;
+  flex-direction: row;
+  padding: 1em 2em;
+  align-items: center;
+  color: #999;
+  flex-grow: 1;
+  font-size: 12px;
+  font-weight: 200;
+  justify-content: space-between;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.credits {
+  max-width: 100px;
+}
+
+.burger {
+  display: none;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+}
+.burger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+.burger:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -7px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-header {
+    font-size: 32px;
+  }
+  .posts li {
+    flex-wrap: wrap;
+  }
+  .post-content {
+    flex: 1 1 100%;
+  }
+  .post-image-wrapper {
+    min-height: 230px;
+    flex: 1 1 100%;
+  }
+  .posts li:nth-child(even) .post-header {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 50px;
+  }
+  .date-left {
+    right: 30px;
+  }
+  .post-5 .post-content {
+    padding-bottom: 100px;
+  }
+
+  .post-5 .date {
+    bottom: 30px;
+    top: auto;
+    left: 0;
+    text-align: center;
+  }
+  .footer-wrapper {
+    margin: 15px;
+  }
+  .navbar {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .logo {
+    margin: 40px auto 0;
+  }
+  nav {
+    padding: 30px 30px 50px;
+    flex-direction: column;
+  }
+  .posts li:nth-child(even) .post-text {
+    text-align: left;
+  }
+  .banner {
+    background-size: cover;
+    background-position: center bottom;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .posts {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .banner-header,
+  .post-header {
+    font-size: 32px;
+  }
+  .news-container {
+    margin: 0;
+    width: 100%;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .credits {
+    max-width: 100%;
+  }
+}
