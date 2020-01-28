@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 12 - Simple TODO List</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1>Sets of terms</h1>
+        <div id="mainPage">
+            <div class="mainPageWrap">
+                <ol id="listOfTerms"></ol>
+                <button id="addNew">Add new</button>
+            </div>
+        </div>
+        <div id="newPage">
+            <div class="setNameWrap">
+                <input type="text" id="setName" placeholder="Enter Set name"><button id="AddTerms">Add terms</button>
+            </div>
+            <div id="termDefenitionWrap">
+                <input type="text" id="term" placeholder="Enter term"> <input type="text" id="termDefenition" placeholder="Enter defenition"><button id="removeButton">Remove</button>
+            </div>
+            <button id="saveChanges">Save Changes</button>
+            <button id="cancel">Cancel</button>
+        </div>
+        <div id="editPage">
+            <div id="EditTermDefenitionWrap">
+                <input type="text" id="editTerm"> <input type="text" id="editTermDefenition"><button id="saveEditChanges">Save
+          Changes</button><button id="editCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
